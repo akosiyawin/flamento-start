@@ -10,5 +10,8 @@
         "psr-4": {
             "app\\" : "."
         }
+    },
+    "require": {
+        "yayin/flamento-core": "^1.0"
     }
 }

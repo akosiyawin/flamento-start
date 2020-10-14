@@ -1,7 +1,7 @@
 <?php
 use \app\http\controllers\AuthController;
 use \app\http\controllers\AdminController;
-use app\core\Application;
+use flamist\package\Application;
 
 require_once dirname(__DIR__)."/vendor/autoload.php";
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
