@@ -1,0 +1,14 @@
+{
+    "name": "yayin/flamist",
+    "authors": [
+        {
+            "name": "Darwin Marcelo",
+            "email": "akosiyawin@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\" : "."
+        }
+    }
+}

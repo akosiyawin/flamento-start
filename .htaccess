@@ -1,0 +1,20 @@
+DirectoryIndex server.php
+
+<Files *.php>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files server.php>
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.+)$ server.php?url=$1 [QSA,L]
+    Options All -Indexes
+</IfModule>
+
