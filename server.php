@@ -1,4 +1,4 @@
 <?php
 //TODO: Configure this later..
 
-header("Location: public");
+header("Location: public/console");
