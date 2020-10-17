@@ -8,6 +8,9 @@ Download or Clone this repository.
 Extract to your localhost (xampp,etc..)
 Change the root directory name (flamento-start-master) to your desired.
 
+Install composer:
+$ composer install
+
 Launch your browser and visit the url:
 
 If you desire to serve your index.php,
@@ -21,3 +24,4 @@ If you do not wish to serve your public index,
 then just locate the public directory of your flamento app.
 
 example: localhost:80/myFlamento/public
+
