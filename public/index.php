@@ -1,6 +1,4 @@
 <?php
-use \app\http\controllers\AuthController;
-use \app\http\controllers\AdminController;
 use flamist\package\Application;
 
 require_once dirname(__DIR__)."/vendor/autoload.php";
@@ -14,22 +12,12 @@ $config = [
         'password' => $_ENV['DB_PASSWORD'],
     ],
     'console' => $_ENV['CONSOLE'],
-    'userAuth' => \app\database\models\User::class
+    'userAuth' => ''
 ];
 
-
 $app = new Application(dirname(__DIR__),$config);
-$app->route->get("/login",[AuthController::class,"login"]);
-$app->route->post("/login",[AuthController::class,"login"]);
-$app->route->post("/update/p/user/status",[AdminController::class,"updateStatus"]);
-$app->route->post("/update/p/user/role",[AdminController::class,"updateRole"]);
-$app->route->post("/admin/p/signout",[AdminController::class,"signout"]);
-
-$app->route->get("/admin/dashboard","AdminController@dashboard");
-$app->route->get("/admin/get/users","AdminController@getUsers");
-$app->route->get("/admin/get/offices","AdminController@getOffices");
-$app->route->post("/add/post/user","AdminController@addUser");
-$app->route->get("/admin/get/users/by/office","AdminController@getUsersByOffice");
-
+$app->route->get("/",function (){
+    return "Hello Flamentist";
+});
 
 //$app->start();//Must run lastly
