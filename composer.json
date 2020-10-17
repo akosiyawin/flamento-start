@@ -1,0 +1,20 @@
+{
+  "name": "yayin/flamento",
+  "description": "PHP MVC framework for flamentist",
+  "authors": [
+    {
+      "name": "Darwin Marcelo",
+      "email": "akosiyawin@gmail.com"
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "^5.1",
+    "wanfeiyy/dd": "^1.0",
+    "yayin/flamento-core": "^v1.0.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "app\\": "."
+    }
+  }
+}
